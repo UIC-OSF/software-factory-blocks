@@ -81,6 +81,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@e1253824e5c10ff9df46874f81ed3ec929e19cfd # v6
         with:
           role-to-assume: ${{ secrets.AWS_BEDROCK_ROLE_ARN }}
+          # Names the session so Bedrock logs and CloudTrail show which repo and workflow spent what.
+          role-session-name: ${{ github.event.repository.name }}-issue-triage
           aws-region: ${{ vars.AWS_REGION || 'us-east-2' }}
 
       - name: Claude triage
