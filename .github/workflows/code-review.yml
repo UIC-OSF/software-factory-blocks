@@ -349,7 +349,7 @@ jobs:
         # `bun install` inside the action (up to ~3 min) counts against these 22.
         timeout-minutes: 22
         continue-on-error: true
-        uses: anthropics/claude-code-action@cab360f6565aa35a51d6ce9e43f1f4287c0a32ea # v1
+        uses: anthropics/claude-code-action@c0949c50a78c1ec8ce2647db36629b870e715d0c # v1
         with:
           # Non-empty only on a self-editing PR; see the header comment.
           github_token: ${{ contains(steps.ctx.outputs.changed_workflow, 'code-review.yml') && secrets.GITHUB_TOKEN || '' }}
