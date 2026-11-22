@@ -89,7 +89,7 @@ jobs:
         id: claude
         timeout-minutes: 8
         continue-on-error: true
-        uses: anthropics/claude-code-action@cab360f6565aa35a51d6ce9e43f1f4287c0a32ea # v1
+        uses: anthropics/claude-code-action@f431adaf77e0fecf918431e75a2b5b45b85af002 # v1
         with:
           # Explicit token: the model has no shell, so it cannot use it, and it
           # skips the Claude App exchange this job does not need.
